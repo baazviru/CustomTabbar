@@ -20,14 +20,14 @@ class tbVC: UITabBarController {
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
-//        if secondItemImageView != nil{
-//            let rotate = CABasicAnimation(keyPath: "transform.rotation")
-//            rotate.fromValue = CGFloat.pi*2
-//            rotate.toValue = 0
-//            rotate.duration = 0.6
-//            rotate.isRemovedOnCompletion = false
-//            secondItemImageView.layer.add(rotate, forKey: "transform.rotation")
-//        }
+        if secondItemImageView != nil{
+            let rotate = CABasicAnimation(keyPath: "transform.rotation")
+            rotate.fromValue = CGFloat.pi*2
+            rotate.toValue = 0
+            rotate.duration = 0.6
+            rotate.isRemovedOnCompletion = false
+            secondItemImageView.layer.add(rotate, forKey: "transform.rotation")
+        }
         
         if let view:UIView = item.value(forKey: "view") as? UIView {
             if let currentImageView = view.subviews.compactMap({ $0 as? UIImageView }).first {
@@ -38,7 +38,7 @@ class tbVC: UITabBarController {
                 rotate.duration = 0.6
                 rotate.isRemovedOnCompletion = false
                 currentImageView.layer.add(rotate, forKey: "transform.rotation")
-                //secondItemImageView = currentImageView
+                secondItemImageView = currentImageView
             }
         }
     }
