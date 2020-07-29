@@ -16,6 +16,7 @@ class tbVC: UITabBarController {
 
         self.tabBar.unselectedItemTintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         self.tabBar.gradientBackground2()
+        print("hello")
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
